@@ -1,3 +1,13 @@
+let userController = new userController("form-user-create", "table-users");
+
+
+
+
+
+
+
+
+
 /* esse bloco foi todo subistituido pelo bloco logo abaixo que executa a mesma coisa mas de maneira mais limpa
 var name = document.querySelector('#exampleInputName');
 var gender = document.querySelector('#form-user-create [name=gender]:checked');
@@ -10,14 +20,16 @@ var admin = document.querySelector('exempleInputAdimin');
 */
 
 // Abaixo estamos fazendo um procura pelos campos do form-user-create que é o id do campo do 'Novo Usuario'
-var fields = document.querySelectorAll('#form-user-create [name]');
+/*var fields = document.querySelectorAll('#form-user-create [name]');
 var user = {}; //essa varialvel é um Json - video 35
 
 function addLine(dataUser){
 
-var tr = document.createElement('tr');
+   
 
-tr.innerHTML=`
+   
+
+document.getElementById('table-users').innerHTML=`
 <tr>
      td><img src="dist/img/user1-128x128.jpg" alt="User Image" class="img-circle img-sm"></td>
      <td>${dataUser.name}</td>
@@ -31,17 +43,12 @@ tr.innerHTML=`
 </tr>
 `;
 
-document.getElementById('table-users').appendChild(tr);
-
-
-
 
 }
 
 
 
-
-fields.forEach(function(field,index){
+/*fields.forEach(function(field,index){
 
     if (field.name =='gender'){
 
@@ -53,7 +60,8 @@ fields.forEach(function(field,index){
         user[field.name] = field.value;
     }
 
-});
+}); 
+
 //abaixo video 36 addeventlisner
     document.getElementById('form-user-create').addEventListener('submit', function(event){
 
@@ -73,7 +81,18 @@ fields.forEach(function(field,index){
 
         });
         
+
+    var objectUser = new User(user.name,
+         user.gender,
+         user.birth,
+         user.country, 
+         user.email, 
+         user.password, 
+         user.photo,
+         user.admin
+         );
+
         addLine(user);
 
     });
-
+*/
